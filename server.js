@@ -43,7 +43,7 @@ server.get('/weather',(req,res)=>{
 class Forcast {
   constructor(item){
     this.date = item.valid_date;
-    this. description= item.weather.description ;
+    this. description= `Low of ${item.low_temp}, high of ${item.max_temp} with broken clouds${item.weather.description}` ;
   }
 }
 
