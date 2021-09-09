@@ -11,7 +11,7 @@ function getWeather(req, res) {
     axios
     .get(url)
     .then( result => {
-      // console.log(result.data)
+
       let newWeather =  result.data.data.map(item => {
         return new Forcast(item);
       })
@@ -20,10 +20,7 @@ function getWeather(req, res) {
     })
     .catch(err => console.log(err))
   
-    // console.log(url)
-    // res.send({
-    //   message: 'from the server side'
-    // })
+  
   }
   
   
